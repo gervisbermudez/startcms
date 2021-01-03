@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use App\Models\Permissions;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
 Route::get('users', function() {
     // If the Content-Type and Accept headers are set to 'application/json', 
     // this will return a JSON structure. This will be cleaned up later.
     return User::all();
+});
+
+Route::get('/permissions', function (Request $request) {
+    return Permissions::all();
 });
