@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\PermissionsApiController;
+use App\Http\Controllers\Api\UsersApiController;
+use App\Models\Permissions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\User;
-use App\Models\Permissions;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,19 +15,18 @@ use App\Models\Permissions;
 | routes are loaded by the RouteServiceProvider within a group which
 | is assigned the "api" middleware group. Enjoy building your API!
 |
-*/
+ */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/* Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+}); */
 
+Route::prefix('v1')->group(function () {
+    Route::get('users', [UsersApiController::class, 'index']);
+    Route::get('users/{id}', [UsersApiController::class, 'show']);
+    Route::post('users', [UsersApiController::class, 'store']);
+    Route::put('users/{id}', [UsersApiController::class, 'update']);
+    Route::delete('users/{id}', [UsersApiController::class, 'delete']);
 
-Route::get('users', function() {
-    // If the Content-Type and Accept headers are set to 'application/json', 
-    // this will return a JSON structure. This will be cleaned up later.
-    return User::all();
-});
-
-Route::get('/permissions', function (Request $request) {
-    return Permissions::all();
+    Route::get('/permissions', [PermissionsApiController::class, 'index']);
 });
