@@ -1,9 +1,8 @@
 <?php
 
 use App\Http\Controllers\Api\PermissionsApiController;
+use App\Http\Controllers\Api\UsergroupsApiController;
 use App\Http\Controllers\Api\UsersApiController;
-use App\Models\Permissions;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,10 +17,11 @@ use Illuminate\Support\Facades\Route;
  */
 
 /* Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+return $request->user();
 }); */
 
 Route::prefix('v1')->group(function () {
+    //Users
     Route::get('users', [UsersApiController::class, 'index']);
     Route::get('users/{id}', [UsersApiController::class, 'show']);
     Route::post('users', [UsersApiController::class, 'store']);
@@ -29,4 +29,5 @@ Route::prefix('v1')->group(function () {
     Route::delete('users/{id}', [UsersApiController::class, 'delete']);
 
     Route::get('/permissions', [PermissionsApiController::class, 'index']);
+    Route::get('/usergroups', [UsergroupsApiController::class, 'index']);
 });
