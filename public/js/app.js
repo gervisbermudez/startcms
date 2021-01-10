@@ -21275,17 +21275,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/css/app.css":
-/*!*******************************!*\
-  !*** ./resources/css/app.css ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -21331,15 +21320,38 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/scss/admin/login.scss":
+/*!*****************************************!*\
+  !*** ./resources/scss/admin/login.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/scss/admin/start.scss":
+/*!*****************************************!*\
+  !*** ./resources/scss/admin/start.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!***********************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/app.css ***!
-  \***********************************************************/
+/*!*******************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/scss/admin/start.scss ./resources/scss/admin/login.scss ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\Admin\Documents\startcms\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Admin\Documents\startcms\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\Users\Admin\Documents\startcms\resources\scss\admin\start.scss */"./resources/scss/admin/start.scss");
+module.exports = __webpack_require__(/*! C:\Users\Admin\Documents\startcms\resources\scss\admin\login.scss */"./resources/scss/admin/login.scss");
 
 
 /***/ })
