@@ -20,10 +20,10 @@
             @csrf
 
             <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
 
+            <div class="input-field mt-4">
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-label for="email" :value="__('Email')" />
             </div>
 
             <div class="flex items-center justify-end mt-4">

@@ -13,20 +13,20 @@
                             <span class="title">Iniciar sesion</span>
                         </div>
             <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
+            <div  class="input-field">
+                <i class="material-icons prefix">perm_identity</i>
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-label for="email" :value="__('Email')" />
             </div>
 
             <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
+            <div  class="input-field mt-4">
+            <i class="material-icons prefix">lock_outline</i>
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password" />
+                <x-label for="password" :value="__('Password')" />
             </div>
 
             <!-- Remember Me -->
